@@ -6,3 +6,4 @@ workflows:
     jobs:
       - spectral/scan:
           flags: --ok
+          
