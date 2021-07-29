@@ -29,6 +29,9 @@ steps:
     echo '##vso[task.prependpath]$(GOBIN)'
     echo '##vso[task.prependpath]$(GOROOT)/bin'
   displayName: 'Set up the Go workspace'
+- task: SpectralScan@0
+  inputs:
+    connection: 'spectral'
 
 - script: |
     go version
